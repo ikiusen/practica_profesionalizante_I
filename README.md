@@ -1,2 +1,2 @@
-# practica_profesionalizante_I
+# Practica Profesionalizante I
 Este es un repositorio para almacenar todos los ejercicios y codigo vinculado a la materia Practicas Profesionalizantes I
