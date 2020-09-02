@@ -19,6 +19,7 @@ int main()
 {
     //FileData* files = new FileData[1000];
     FileData files[1000];
+    cout << "Si es la primera vez corriendo el codigo y no existe el archivo, ingrese 0" << endl;
     cout << "Cuantos registros ingresó la ultima vez" << endl; //El programa debe saber cuantos registros se tienen en total
     cin >> numberOfFiles;
     if(numberOfFiles > 0)
