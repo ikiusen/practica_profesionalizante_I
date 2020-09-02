@@ -1,0 +1,8 @@
+https://www.tutorialspoint.com/reading-and-writing-binary-file-in-c-cplusplus
+
+http://www.java2s.com/Tutorial/Cpp/0240__File-Stream/Saveandreadstructure.htm (principalmente)
+
+https://www.eecs.umich.edu/courses/eecs380/HANDOUTS/cppBinaryFileIO-2.html (principalmente)
+
+https://www.codesdope.com/cpp-file-io/
+
