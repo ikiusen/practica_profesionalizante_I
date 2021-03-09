@@ -12,15 +12,7 @@ int main()
 
     Vehiculo *v1;
 
-    v1 = new Coche();
-    t1.meter(v1);
     v1 = new Moto();
-    t1.meter(v1);
-    v1 = new Coche();
-    t1.meter(v1);
-    v1 = new Moto();
-    t1.meter(v1);
-    v1 = new Coche();
     t1.meter(v1);
     v1 = new Coche();
     t1.meter(v1);
