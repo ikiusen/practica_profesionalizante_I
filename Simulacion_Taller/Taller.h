@@ -9,7 +9,7 @@ class Taller
 {
     public:
         Taller();
-        Taller(int);
+        Taller(int val);
         virtual ~Taller();
         void meter(Vehiculo *v1);
         void repararVehiculo();

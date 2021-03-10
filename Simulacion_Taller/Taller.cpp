@@ -14,9 +14,8 @@ Taller::Taller(int val)
 
 Taller::~Taller()
 {
-    delete this;
     delete []listaVehiculos;
-    }
+}
 
 void Taller::meter(Vehiculo *v1)
 {

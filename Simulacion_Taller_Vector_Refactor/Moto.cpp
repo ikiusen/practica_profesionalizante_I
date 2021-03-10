@@ -10,7 +10,7 @@ Moto::Moto(string color,string marca,int cilindrada)
 
 Moto::~Moto()
 {
-    delete this;//dtor
+
 }
 
 void Moto::arrancar()

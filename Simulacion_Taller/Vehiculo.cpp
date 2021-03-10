@@ -7,5 +7,4 @@ Vehiculo::Vehiculo()
 
 Vehiculo::~Vehiculo()
 {
-    delete this; //dtor
 }

@@ -7,7 +7,6 @@ Moto::Moto()
 
 Moto::~Moto()
 {
-    delete this;//dtor
 }
 
 void Moto::arrancar()

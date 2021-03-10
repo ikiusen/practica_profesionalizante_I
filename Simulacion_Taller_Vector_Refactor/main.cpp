@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    Taller* t1 = new Taller(4);
+    Taller *t1 = new Taller(4);
 
     Vehiculo *v1;
 
@@ -26,5 +26,6 @@ int main()
     t1->repararVehiculo();
 
     delete v1;
+    delete t1;
 
 }

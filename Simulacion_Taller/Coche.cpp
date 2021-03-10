@@ -7,7 +7,6 @@ Coche::Coche()
 
 Coche::~Coche()
 {
-    delete this;//dtor
 }
 void Coche::arrancar()
 {

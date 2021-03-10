@@ -15,8 +15,9 @@ Coche::Coche(string color,string marca,int motor)
 
 Coche::~Coche()
 {
-    delete this;//dtor
+
 }
+
 
 void Coche::arrancar()
 {
