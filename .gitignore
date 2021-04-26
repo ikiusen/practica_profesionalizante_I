@@ -38,3 +38,7 @@
 
 # CMD
 *.bat
+
+# Dia
+.dia.autosave
+.dia~

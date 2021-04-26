@@ -105,23 +105,87 @@ public:
 class AssitanceManagerMapper
 {
 private:
-	
+	int numberOfRegistries;
+
 public:
-	AssitanceManagerMapper(){};
-		
+	AssitanceManagerMapper()
+	{
+		getInitialNumberOfRegistriesOnFile();
+	}
 
 	~AssitanceManagerMapper(){};
+
+	void getInitialNumberOfRegistriesOnFile()
+	{
+		std::ifstream inputFile;
+		std::string line;
+		int line_count = 0;
+		inputFile.open("assistance_registry_v2.txt", std::ios::in | std::ios::out | std::ios::app);
+
+		while(std::getline(inputFile,line))
+		{
+			++line_count;
+		}
+
+		this->numberOfRegistries = line_count;
+
+		inputFile.close();
+	}
+
+	void setNumberOfRegistries(int value)
+	{
+		this->numberOfRegistries = this->numberOfRegistries + value;
+	}
+
+	int getNumberOfRegistries()
+	{
+		return this->numberOfRegistries;
+	}
+
+	/*void select()
+	{
+		std::ifstream readFile;
+		std::string name,c_name,surname,date;
+		bool state;
+    	readFile.open("assistance_registry.txt", std::ios::in);
+	    if(readFile.is_open())
+	    {
+	        while (!readFile.eof())
+	        {
+
+	           readFile >> name;
+	           readFile.get( );
+	           readFile >> surname;
+	           readFile.get( );
+	           readFile >> c_name;
+	           readFile.get( );
+	           readFile >> date;
+	           readFile.get( );
+	           readFile >> state;
+
+	           AssistanceManager *auxAssistanceManager = new AssistanceManager( new Student(name,surname),new Course(c_name),date,state);
+
+	           assitanceManagers.push_back(auxAssistanceManager);
+
+	           delete auxAssistanceManager;
+	        }
+
+    }
+    readFile.close();
+	}*/
 
 	void insert(AssistanceManager* assitanceManager)
 	{
 		std::ofstream saveFile;
-    	saveFile.open("assistance_registry.txt", std::ios::in | std::ios::out | std::ios::app);
+    	saveFile.open("assistance_registry_v2.txt", std::ios::in | std::ios::out | std::ios::app);
 	    if(saveFile.is_open())
 	    {
 	             saveFile << assitanceManager->getStudent().getName() <<" "<< assitanceManager->getStudent().getSurname() <<" "<< assitanceManager->getCourse().getName() <<" "<<
 	             assitanceManager->getDate() <<" "<< assitanceManager->getState() << std::endl;
 	    }
 	    saveFile.close();
+
+	    setNumberOfRegistries(1);
 	}
 
 	void update(AssistanceManager* assitanceManager,bool state)
